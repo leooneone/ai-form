@@ -1,6 +1,6 @@
 
 
-<template> <ai-amount v-model="state.test" :showChinese="true"></ai-amount>
+<template> <ai-date-duration v-model="state.test" :showChinese="true"></ai-date-duration>
     <ai-button size="large" type="primary">我是测试组件</ai-button>
 </template>
 <script setup lang="ts"> 

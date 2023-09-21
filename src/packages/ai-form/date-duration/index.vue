@@ -45,29 +45,7 @@ import { timeCalculate } from '../../utils/index.js'
       immediate:true
       }
   )
-  {
-    'timeRange':{
-      handler:  function(val){
-        let res = ''
-        if (Array.isArray(this.timeRange)) {
-          const [start, end] = this.timeRange.slice(0, 2).map( c => new Date(c).getTime())
-          res = timeCalculate(start, end)
-        }
-        this.duration = res
-        this.$emit('change', val)
-        this.$emit('update:modelValue', val)
-      },
-      immediate: true
-    },
-    modelValue (val) {
-      if (!val) {
-        this.timeRange = ['', '']
-      } else if (Array.isArray(val) && this.timeRange + '' !== val + '') {
-        this.timeRange = val
-      }
-    }
-  }
-}
+  
 </script>
 <style lang="scss" scoped>
 .explain-text {

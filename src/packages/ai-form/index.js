@@ -1,9 +1,10 @@
 // install.js
 import MyButton from "./button/index.vue";
 import MyAmount from "./amount/index.vue";
+import MyDateDuration from "./date-duration/index.vue";
 
 
-const component = [MyButton,MyAmount];
+const component = [MyButton,MyAmount,MyDateDuration];
 
 const AiForm = {
     install(App) {
