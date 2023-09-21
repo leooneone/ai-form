@@ -1,18 +1,26 @@
+// install.js 
+
 // install.js
-import MyButton from "./button/index.vue";
-import MyAmount from "./amount/index.vue";
-import MyDateDuration from "./date-duration/index.vue";
+import MyButton from "./components/ai-button/index.vue";
+import MyAmount from "./components/ai-amount/index.vue";
+import MyDateDuration from "./components/ai-date-duration/index.vue"; 
 
-
-const component = [MyButton,MyAmount,MyDateDuration];
-
+const myComs = import.meta.globEager('./components/ai*/index.vue') 
+ 
 const AiForm = {
     install(App) {
-        component.forEach((item) => {
-            console.log('install',item.name)
-            App.component(item.name, item)
-            //App.component(item.name, MyButton);
-        });
+        for (const path in myComs) {
+
+            let cname = myComs[path].default.name
+           // components[cname] = myComs[path].default
+           console.log('install',cname)
+            App.component(cname, myComs[path].default)
+          }
+        // myComs.forEach((item) => {
+        //     console.log('install',item.name)
+        //     App.component(item.name, item)
+        //     //App.component(item.name, MyButton);
+        // });
     },
 };
 

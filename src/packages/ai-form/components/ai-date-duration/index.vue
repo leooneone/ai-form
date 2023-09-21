@@ -6,7 +6,7 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup name="ai-date-duration">
+<script lang="ts" setup name="AiDateDuration">
 import { reactive ,watch,computed,defineEmits,defineProps} from 'vue'
 import { timeCalculate } from '../../utils/index.js' 
   const props=defineProps(["modelValue","cmpType", "showDuration","tag", "tagIcon", "defaultValue", "labelWidth", "range-separator", "start-placeholder", "end-placeholder", "clearable", "format", "value-format", "regList", "changeTag", "proCondition", "asSummary", "fieldId", "renderKey", "layout", "value"]) 
