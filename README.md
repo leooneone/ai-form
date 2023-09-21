@@ -37,6 +37,7 @@ AiForm是一个开源的表单设计/解析器。基于对开源项目form-gener
 > Vite 不再支持 Node 12 / 13 / 15，因为上述版本已经进入了 EOL 阶段。现在你必须使用 Node 14.18+ / 16+ 版本。
 
 包使用方法：
+```bash
 # 安装组件
 npm i ai-form@latest -S 
 
