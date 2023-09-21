@@ -22,7 +22,7 @@
 
 #### 🌈 介绍
 
-AIFORM是一个开源的工作流引擎。基于对开源项目form-generator和扩展项目approvalFlow学习和复用，使用 vue3.x + CompositionAPI setup 语法糖 + typescript + vite + element plus  技术重构而成，适配手机、平板、pc 的表单设计/解析器，希望减少工作量，帮助大家实现快速开发。
+AiForm是一个开源的工作流引擎。基于对开源项目form-generator和扩展项目approvalFlow学习和复用，使用 vue3.x + CompositionAPI setup 语法糖 + typescript + vite + element plus  技术重构而成，适配手机、平板、pc 的表单设计/解析器，希望减少工作量，帮助大家实现快速开发。
 
 #### ⛱️ 线上预览
 
@@ -36,6 +36,17 @@ AIFORM是一个开源的工作流引擎。基于对开源项目form-generator和
 
 > Vite 不再支持 Node 12 / 13 / 15，因为上述版本已经进入了 EOL 阶段。现在你必须使用 Node 14.18+ / 16+ 版本。
 
+包使用方法：
+1、npm i ai-form@latest -S
+
+2、main.ts中增加如下配置:
+
+import AIForm from "ai-form"; //引入下载后的组件
+
+app.use(AIForm);
+
+
+源码开发：
 ```bash
 # 进入项目
 cd ai-form
