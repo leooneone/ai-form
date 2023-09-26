@@ -1,0 +1,20 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+ 
+///修复错误提示被遮挡问题
+.el-form{
+   
+    
+    .el-input__wrapper{ padding: 1px 1px!important;}
+     
+  
+} 

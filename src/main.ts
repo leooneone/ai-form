@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
-import './style.css'
+import './style.scss'
 import App from './App.vue'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import AiForm from "./packages/ai-form/index.js"; //导入
+import AiForm from "../index.js"; //导入
 
 
 

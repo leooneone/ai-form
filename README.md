@@ -49,7 +49,6 @@ app.use(AiForm);
 
 
 源码开发：
-```bash
 # 进入项目
 cd ai-form
 
