@@ -26,12 +26,11 @@ AiForm是一个开源的表单设计/解析器。基于对开源项目form-gener
 
 #### ⛱️ 线上预览
 
-- vue3.x 版本预览（aibpm.ui.plus）<a href="https://demo.aiform.ailicloud.com" target="_blank">https://demo.aiform.ailicloud.com(暂未开通)</a>
+- vue3.x 版本预览（aibpm.ui.plus）<a href="https://demo.aiform.ailicloud.com" target="_blank">https://demo.aiform.ailicloud.com</a>
 
 #### 📸部分截图：
-![template_form.png](https://raw.githubusercontent.com/leooneone/ai-form/main/src/assets/demo/demo.PNG)
-
-
+![demo.png](https://raw.githubusercontent.com/leooneone/ai-form/main/src/assets/demo/demo.png)
+ 
 #### ⚡ 使用说明
 
 > Vite 不再支持 Node 12 / 13 / 15，因为上述版本已经进入了 EOL 阶段。现在你必须使用 Node 14.18+ / 16+ 版本。
