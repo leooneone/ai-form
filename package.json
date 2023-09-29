@@ -1,19 +1,36 @@
 {
   "name": "ai-form",
   "private": false,
-  "version": "0.3.89",
+  "version": "0.6.0",
   "type": "module",
+  "main": "./ai-form/ai-form.js",
+
+  "author": "Leo",
+  "license":"MIT",
+  "description": "AiForm 表单设计/解析器",
+  "keywords": [
+    "vue3",
+    "element-plus",
+    "aiform",
+    "form",
+    "designer"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build1": "vue-tsc && vite build",
-    "preview": "vite preview"
+    
+    "build:dist": "vite build --config vite.build.config.ts",
+    "preview": "vite preview",
+    "lib": "vite build --config vite-lib.config.js",
+    "build-library": "vite build --target lib --name ai-from ./src/install.js",
+    "lint": "vite lint"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.0.10",
     "element-plus": "^2.3.14",
     "mitt": "^3.0.1",
     "numeral": "^2.0.6",
+    "test-ai-form": "^0.1.1",
     "vue": "^3.3.4",
     "vue-i18n": "^9.4.1",
     "vuedraggable": "^4.1.0"
@@ -22,9 +39,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "sass": "^1.67.0",
     "typescript": "^5.0.2",
-    "unplugin-vue-define-options": "^1.3.18",
     "vite": "^4.4.5",
-    "vite-plugin-dts": "^1.4.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-tsc": "^1.8.5"
   }

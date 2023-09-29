@@ -1,0 +1,160 @@
+$selectedColor: #f6f7ff;
+$lighterBlue: #409eff;
+
+
+.components-list {
+	box-sizing: border-box;
+	height: 100%;
+	padding-left: 8px;
+	padding-right: 8px;
+	.components-item {
+		display: inline-block;
+		width: 48%;
+		margin: 1%;
+		transition: transform 0ms !important;
+	}
+}
+.components-draggable {
+	padding-bottom: 10px;
+}
+.components-title {
+	
+	border-left: 3px solid rgb(64, 158, 255); padding-left: 5px; margin-bottom: 5px; font-size: 20px;
+	font-size: 14px;
+	color: #222;
+	margin: 6px 2px;
+	.svg-icon {
+		color: #666;
+		font-size: 18px;
+	}
+}
+.components-body {
+	padding: 8px 12px;
+	background: #fff;
+	font-size: 12px;
+	line-height: 18px;
+	cursor: move;
+	border: 1px solid #d9d9d9;
+	border-radius: 3px;
+	.svg-icon {
+		color: #777;
+		font-size: 15px;
+	}
+	&:hover {
+		border: 1px dashed #787be8;
+		color: #787be8;
+		.svg-icon {
+			color: #787be8;
+		}
+	}
+}
+
+ 
+ 
+  
+
+
+
+.empty-info {
+	position: absolute;
+	top: 33%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 18px;
+	color: #ccb1ea;
+	letter-spacing: 4px;
+}
+
+.drawing-item,
+.drawing-layout-item {
+  &:hover {
+	background: $selectedColor;
+	border-radius: 6px;
+	outline: 1px dashed #38adff!important;
+    & > .el-form-item {
+      background: $selectedColor;
+      border-radius: 6px;
+    }
+    & > .drawing-item-copy,
+    & > .drawing-item-delete {
+      display: initial;
+    }
+  }
+  & > .drawing-item-copy,
+  & > .drawing-item-delete {
+    display: none;
+    position: absolute;
+    top: -10px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    border: 1px solid;
+    cursor: pointer;
+    z-index: 1;
+  }
+  & > .drawing-item-copy {
+    right: 56px;
+    border-color: $lighterBlue;
+    color: $lighterBlue;
+    background: #fff;
+    &:hover {
+      background: $lighterBlue;
+      color: #fff;
+    }
+  }
+  & > .drawing-item-delete {
+    right: 24px;
+    border-color: #f56c6c;
+    color: #f56c6c;
+    background: #fff;
+    &:hover {
+      background: #f56c6c;
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+.drawing-layout-item {
+	position: relative;
+	cursor: move;
+	box-sizing: border-box;
+	outline: 1px dashed #ccc!important;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	.drawing-layout-item {
+		margin-bottom: 2px;
+	}
+	.el-form-item {
+		margin-bottom: 0;
+	}
+	.drag-wrapper {
+		min-height: 80px;
+		padding: 20px 0;
+		overflow: hidden;
+	}
+	&.active-form-item {
+		border: 1px dashed $lighterBlue;
+	}
+	.component-name {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 12px;
+		color: #bbb;
+		display: inline-block;
+		padding: 0 6px;
+	}
+}
+
+
+
+
+ 
+ 
