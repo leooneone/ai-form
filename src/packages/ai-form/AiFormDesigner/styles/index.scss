@@ -65,6 +65,53 @@ $lighterBlue: #409eff;
 	color: #ccb1ea;
 	letter-spacing: 4px;
 }
+.drawing-item {
+	position: relative;
+	cursor: move;
+	&.unfocus-bordered {
+		&:not(.active-form-item) {
+			& > div {
+				&:first-child {
+					border: 1px dashed #ccc;
+				}
+			}
+		}
+	}
+	.el-form-item {
+		padding: 8px 10px;
+	}
+}
+.drawing-layout-item {
+	position: relative;
+	cursor: move;
+	box-sizing: border-box;
+	outline: 1px dashed #ccc!important;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	.drawing-layout-item {
+		margin-bottom: 2px;
+	}
+	.el-form-item {
+		margin-bottom: 0;
+	}
+	.drag-wrapper {
+		min-height: 80px;
+		padding: 20px 0;
+		overflow: hidden;
+	}
+	&.active-form-item {
+		border: 1px dashed $lighterBlue;
+	}
+	.component-name {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 12px;
+		color: #bbb;
+		display: inline-block;
+		padding: 0 6px;
+	}
+}
 
 .drawing-item,
 .drawing-layout-item {

@@ -26,7 +26,7 @@ AiForm是一个开源的表单设计/解析器。基于对开源项目form-gener
 
 #### ⛱️ 线上预览
 
-- vue3.x 版本预览（aibpm.ui.plus）<a href="https://demo.aiform.ailicloud.com" target="_blank">https://demo.aiform.ailicloud.com</a>
+- vue3.x 版本预览（ai-form）<a href="https://demo.aiform.ailicloud.com" target="_blank">https://demo.aiform.ailicloud.com</a>
 
 #### 📸部分截图：
 ![demo.png](https://raw.githubusercontent.com/leooneone/ai-form/main/src/assets/demo/demo.png)
@@ -46,8 +46,10 @@ import AiForm from "ai-form";
 # 启用表单组件 main.ts
 app.use(AiForm);
 
-# 调用组件
+# 调用组件 调用组件前 需要引入elment plus 及 样式文件
 <ai-form-designer :show-header="true" >
+
+```
 
 源码开发：
 ```bash

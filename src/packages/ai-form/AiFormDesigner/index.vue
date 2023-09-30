@@ -719,6 +719,7 @@ defineExpose({
 <style lang="scss" scoped>
 .device {
   > form {
+    .el-row{padding-top:20px;}
     margin: 0 auto;
     padding: 10px;
     height: calc(100% - 20px);
@@ -728,10 +729,12 @@ defineExpose({
 .device.pc {
   padding: 0;
   form {
+    
   }
 }
 .device.h5 {
-  form {
+  form { 
+   
     width: 390px;
     border-radius: 15px;
     box-shadow: 0 0 1px 10px #495060;
