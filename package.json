@@ -1,12 +1,11 @@
 {
   "name": "ai-form",
   "private": false,
-  "version": "0.6.0",
+  "version": "0.6.6",
   "type": "module",
-  "main": "./ai-form/ai-form.js",
-
+  "main": "./lib/ai-form.js",
   "author": "Leo",
-  "license":"MIT",
+  "license": "MIT",
   "description": "AiForm 表单设计/解析器",
   "keywords": [
     "vue3",
@@ -19,15 +18,14 @@
     "dev": "vite",
     "build": "vite build",
     "build1": "vue-tsc && vite build",
-    
     "build:dist": "vite build --config vite.build.config.ts",
     "preview": "vite preview",
     "lib": "vite build --config vite-lib.config.js",
-    "build-library": "vite build --target lib --name ai-from ./src/install.js",
     "lint": "vite lint"
   },
   "dependencies": {
     "element-plus": "^2.3.14",
+    "fast-glob": "^3.3.1",
     "mitt": "^3.0.1",
     "numeral": "^2.0.6",
     "test-ai-form": "^0.1.1",
@@ -40,6 +38,7 @@
     "sass": "^1.67.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-tsc": "^1.8.5"
   }

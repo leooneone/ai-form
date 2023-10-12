@@ -3,7 +3,8 @@
 
 import * as svg from '@element-plus/icons-vue'
 
-import globalProperties from './globalProperties'
+import 'virtual:svg-icons-register'
+import globalProperties from './src/globalProperties'
  
 /**
  * 导出全局注册 element plus svg 图标
@@ -18,53 +19,27 @@ import globalProperties from './globalProperties'
   
   }
 
-  // install.js 
-
+  
    
-  import MyButton from "./packages/ai-form/components/AiButton/index.vue";
-  import MyAmount from "./packages/ai-form/components/AiAmount/index.vue";
-  
-  
-  const component = [MyButton,MyAmount];
-  
-  const AiForm1 = {
-      install(app) {
-          component.forEach((item) => {
-            console.log('item',item)
-              console.log('install',item.name)
-              app.component(item.name, item)
-              //App.component(item.name, MyButton);
-          });
-      },
-  };
-   
-  const myComs = import.meta.globEager('./packages/ai-form/components/Ai*/index.vue') 
+  const myComs = import.meta.globEager('./src/packages/Ai*/index.vue') 
 const AiForm = {
     install(app) {
- 
-      console.log('install ',myComs)
+  
         ///注册全局属性
         app.use(globalProperties)
-        
-      console.log('use globalProperties ')
+         
         ///注册elment icon  
 
         elSvg(app)
-        
-      console.log('elSvg ')
+         
         for (const path in myComs) {
 
             let cname = myComs[path].default.name
-
-            console.log('install com',cname)
+ 
            app.component(cname, myComs[path].default)
           }
 
-        // myComs.forEach((item) => {
-        //     console.log('install',item.name)
-        //     App.component(item.name, item)
-        //     //App.component(item.name, MyButton);
-        // });
+        
     },
 };
  
