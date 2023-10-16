@@ -31,11 +31,13 @@
     <el-main style="padding: 0">
       <el-container style="height: 100%">
         <el-aside width="300px" class="left-panel">
+          
           <el-tabs
             v-model="state.activeTabName"
             :stretch="true"
             style="height: 100%"
           >
+          
             <el-tab-pane
               v-for="(item, index) in state.comTabs"
               :label="item.label"
@@ -128,6 +130,7 @@
                 <div class="touchbar"></div>
               </el-form>
               <div v-show="!state.drawingList.length" class="empty-info">
+                
                 从左侧拖入或点选组件进行表单设计
               </div>
             </el-main>
@@ -214,7 +217,7 @@ const Draggable = defineAsyncComponent(
 const emits = defineEmits(["change"]);
 const formConfInDB = getFormConf();
 // const idGlobal = getIdGlobal();
-const props = defineProps(["conf", "showHeader"]);
+const props = defineProps(["conf", "showHeader","custom"]);
 
 const { proxy } = getCurrentInstance() as any;
 ///是否被外部使用
@@ -312,7 +315,12 @@ const created = () => {
 const setMode = (mode) => {
   state.deviceMode = mode;
 };
-onMounted(() => {});
+onMounted(() => {
+  if(props.custom)
+  state.comTabs= state.comTabs.concat(props.custom)
+ //Object.assign(state.comTabs,props.custom)
+
+});
 watch(
   () => props.conf,
   (conf) => {

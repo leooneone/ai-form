@@ -3,15 +3,14 @@
 <template> 
 
  
-     
+     <Test></Test>
 <AiFormDesigner :custom="state.custom" :show-header="true" >
-  <template #right="{activeData}">
-  <el-form-item label="test"   v-if="activeData.tag==='ai-ou-select'">
-    {{ activeData }}
-    <el-switch v-model="activeData.showLabel" ></el-switch>
-  <el-button>123443fdssafasdf+++++++++</el-button>
-
-</el-form-item>
+  <template #right="{activeData}"> 
+  
+    <PropPanel :active-data="activeData"></PropPanel>
+   
+ 
+ 
 </template>
 </AiFormDesigner>
  
@@ -40,16 +39,29 @@
 </template>
 <script setup lang="ts"> 
 import { reactive,provide } from "vue"; 
-import BuildPanel from './debugPanel/buildPanel.vue'
-import RealPanel from './debugPanel/realPanel.vue'
-import NpmPanel from './debugPanel/npmPanel.vue'
+
+import PropPanel from './demo/AiSignDemo/prop.vue'
 const state=reactive({panel:'real',
 
-custom:{
-
-
-
-}
+custom:[{
+      label: "我的组件",
+      name: "my",
+      coms: [
+        {
+          title: "扩展组件",
+          model: [ { "label": "编辑电子签名", "dataType": "string", "showLabel": true, 
+          "tag": "AiSignDemo", "tagIcon": "input",  "span": 24,
+           "labelWidth": null, "style": { "width": "100%" }, 
+           "clearable": true, "prepend": "", "append": "",   "readonly": false, "disabled": false, 
+           "isCrop":true,
+           "required": true
+           
+             }],
+          color: "var(--el-color-primary)",
+        },
+        
+      ],
+    }],
 
 })
 
