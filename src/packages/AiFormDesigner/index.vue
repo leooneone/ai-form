@@ -6,6 +6,7 @@
  */
 
 <template>
+  <div style="height: 100%;background-color:white">
   <el-container style="height: 100%">
     <el-header
       v-if="props.showHeader"
@@ -171,6 +172,7 @@
     </template>
   </el-dialog>
   <PreviewPanel ref="previewPanelRef"></PreviewPanel>
+</div>
 </template>
 
 <script lang="ts" setup name="AiFormDesigner">
