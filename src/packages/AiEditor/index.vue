@@ -41,11 +41,11 @@ onMounted(() => {
   if (props.disabled) return;
   var that = this;     
   
-  loadTinymce((tinymce) => {
-   console.log('aaaaa++++++++++++++++',tinymce)
+  loadTinymce((tinymce) => { 
+  //window.tinymce=tinymce
     // eslint-disable-next-line global-require
-    var res =import.meta.glob("./zh_CN.js");
-    console.log('res',res)
+    //var res =import.meta.glob("./zh_CN.js");
+     
     let conf = {
       selector: `#${state.tinymceId}`,
       language: "zh_CN",

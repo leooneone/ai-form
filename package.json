@@ -1,7 +1,7 @@
 {
   "name": "ai-form",
   "private": false,
-  "version": "0.9.3",
+  "version": "0.9.8",
   "type": "module",
   "main": "./lib/ai-form.js",
   "author": "Leo",
@@ -28,7 +28,6 @@
     "fast-glob": "^3.3.1",
     "mitt": "^3.0.1",
     "numeral": "^2.0.6",
-    "test-ai-form": "^0.1.1",
     "vue": "^3.3.4",
     "vue-esign": "^1.1.4",
     "vue-i18n": "^9.4.1",
