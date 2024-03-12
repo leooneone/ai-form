@@ -46,9 +46,22 @@ import AiForm from "ai-form";
 # 启用表单组件 main.ts
 app.use(AiForm);
 
-# 调用组件 调用组件前 需要引入elment plus 及 样式文件
-<ai-form-designer :show-header="true" >
+# 调用组件 调用组件前 需要引入elment plus 及 样式文件 设计器：
+ 
+ <ai-form-designer :show-header="false"     :conf="state.conf" @ok="onOk"   >
+        </ai-form-designer> 
 
+ show-header:是否显示设计器的header
+ conf:配置对象，可以传入已有的配置或者空对象{}，及获取修改后的配置
+ ok事件：  
+		参数 
+		formsetting: 表单设置
+ 
+
+
+解析器：
+
+<ai-form-parser :conf="state.conf"   ></ai-form-parser>
 ```
 
 源码开发：
