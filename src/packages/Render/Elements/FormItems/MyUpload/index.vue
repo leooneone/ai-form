@@ -129,13 +129,7 @@ const onUpload = () => {
  
 </script>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
 
-export default defineComponent({
-  name: 'admin/file',
-})
-</script>
 
 <style scoped lang="scss">
 .my-el-link {
