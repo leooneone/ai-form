@@ -5,13 +5,20 @@
     class="svg-external-icon svg-icon"
     v-on="$attrs"
   />
-  <svg v-else :class="svgClass" aria-hidden="true" v-on="$attrs" fill="red" :style="styleExternalIcon" >
-    <use  :href="iconName" />
-  </svg> 
+  <svg
+    v-else
+    :class="svgClass"
+    aria-hidden="true"
+    v-on="$attrs"
+    fill="red"
+    :style="styleExternalIcon"
+  >
+    <use :href="iconName" />
+  </svg>
 </template>
 
 <script lang="ts" setup name="AiSvgIcon">
-import { computed } from "vue";
+import { computed } from 'vue';
 
 //const modules = import.meta.globEager("../icons/svg/*.svg");
 
@@ -26,14 +33,14 @@ const props = defineProps({
   },
   className: {
     type: String,
-    default: "",
+    default: '',
   },
   // svg 颜色
   color: {
     type: String,
-  },// svg 大小
+  }, // svg 大小
   size: {
-    type: Number,
+    type: [Number, String],
     default: () => 14,
   },
 });
@@ -48,18 +55,16 @@ const svgClass = computed(() => {
   if (props.className) {
     return `svg-icon ${props.className}`;
   }
-  return "svg-icon";
+  return 'svg-icon';
 });
 const styleExternalIcon = computed(() => {
   return {
-  //  mask: `url(${props.iconClass}) no-repeat 50% 50%`,
+    //  mask: `url(${props.iconClass}) no-repeat 50% 50%`,
     'font-size': `${props.size}px`,
     color: `${props.color}`,
     //"-webkit-mask": `url(${props.iconClass}) no-repeat 50% 50%`,
   };
 });
-
- 
 </script>
 
 <style scoped>
