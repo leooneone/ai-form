@@ -4,7 +4,7 @@
 
  
      <Test></Test>
-<AiFormDesigner :custom="state.custom" :show-header="true" >
+<AiFormDesigner :custom="state.custom" :show-header="true"  >
   <template #right="{activeData}"> 
   
     <PropPanel :active-data="activeData"></PropPanel>
